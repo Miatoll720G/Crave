@@ -54,7 +54,7 @@ echo -e ">>> Done"
 echo -e ">>> Cloning MIUI Camera Vendor Tree: xiaomi/miuicamera"
 git clone https://github.com/Miatoll720G/vendor_xiaomi_miuicamera-miatoll.git -b 16 vendor/xiaomi/miuicamera-miatoll
 echo -e ">>> Done"
-
+git clone https://github.com/Miatoll720G/packages_apps_ViPER4AndroidFX.git -b v4a packages/apps/ViPER4AndroidFX
 echo -e ">>> All Device, Vendor, Kernel and Hardware Trees Cloned Successfully"
 echo -e ">>> Proceeding to sync remaining sources..."
 echo -e ">>> Please wait, this may take a while..."
