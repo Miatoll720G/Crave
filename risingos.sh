@@ -47,6 +47,9 @@ echo -e ">>> Done"
 echo -e ">>> Cloning MIUI Camera Vendor Tree: xiaomi/miuicamera"
 git clone https://github.com/Miatoll720G/vendor_xiaomi_miuicamera-miatoll.git -b 16 vendor/xiaomi/miuicamera-miatoll
 echo -e ">>> Done"
+echo -e ">>> Cloning Dolby Vendor Tree: vendor/oneplus/dolby"
+git clone https://github.com/frost-testzone/vendor_oneplus_dolby.git -b main vendor/oneplus/dolby
+echo -e ">>> Done"
 echo -e ">>> All Device, Vendor, Kernel and Hardware Trees Cloned Successfully"
 echo -e ">>> Proceeding to sync remaining sources..."
 echo -e ">>> Please wait, this may take a while..."
