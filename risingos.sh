@@ -52,7 +52,7 @@ echo -e ">>> Cloning Additional Hardware Trees"
 git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-22.2 hardware/sony/timekeep
 echo -e ">>> Done"
 echo -e ">>> Cloning MIUI Camera Vendor Tree: xiaomi/miuicamera"
-git clone https://github.com/RisingMIatoll/vendor_xiaomi_miuicamera-miatoll.git -b 16 vendor/xiaomi/miuicamera
+git clone https://github.com/RisingMIatoll/vendor_xiaomi_miuicamera-miatoll.git -b 16 vendor/xiaomi/miuicamera-miatoll
 echo -e ">>> Done"
 echo -e ">>> All Device, Vendor, Kernel and Hardware Trees Cloned Successfully"
 echo -e ">>> Proceeding to sync remaining sources..."
