@@ -73,6 +73,13 @@ export BUILD_USERNAME=AbdoElbanaa
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
+mkdir -p vendor/lineage-priv/keys
+subject='/C=EG/ST=cairo/L=cairo/O=AbdoElbanaa/OU=AbdoElbanaa/CN=AbdoElbanaa/emailAddress=it@elbana.net'
+for x in releasekey platform shared media networkstack verity otakey testkey sdk_sandbox bluetooth nfc; do
+    ./development/tools/make_key vendor/lineage-priv/keys/$x "$subject";
+done
+
+
 # ================================
 # Setup build environment
 # ================================
