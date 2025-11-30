@@ -67,6 +67,12 @@ echo -e ">>> Syncing repo"
 echo -e ">>> Repo sync completed"
 echo -e ">>> Proceeding to build setup..."
 echo -e ">>> Please wait..."
+
+
+export BUILD_USERNAME=AbdoElbanaa 
+export BUILD_HOSTNAME=crave
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
+
 # ================================
 # Setup build environment
 # ================================
