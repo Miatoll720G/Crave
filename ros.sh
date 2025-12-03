@@ -113,10 +113,6 @@ echo -e ">>> Proceeding to sync remaining sources..."
 echo -e ">>> Please wait, this may take a while..."
 echo "Starting the build process..."
 
-echo "Setting up private signing keys… don't leak these, genius."
-mkdir -p vendor/lineage-priv/keys
-git clone https://github.com/Rosmi720/Keys.git vendor/lineage-priv/keys 
-
 
 . build/envsetup.sh
 
