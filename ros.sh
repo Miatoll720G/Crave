@@ -57,7 +57,7 @@ Exit code: \`$code\` — something blew up. Shockingly, your fault? Probably."
 }
 trap handle_exit EXIT
 
-send_telegram_message "*Build Started for RMX1971*  
+send_telegram_message "*Build Started for Miatoll*  
 If something catches fire, I'll let you know."
 
 BUILD_START_TIME=$(date +%s)
@@ -75,7 +75,7 @@ rm -rf .repo/local_manifests/ \
 
 
 echo "Initializing RisingOS-Revived repo… try not to curse at it."
-repo init -u https://github.com/RisingOS-Revived/android -b sixteen --git-lfs
+repo init -u https://github.com/RisingMIatoll/android -b sixteen --git-lfs
 
 echo "Syncing sources… this will take forever. Go touch grass."
 if [ -f "/opt/crave/resync.sh" ]; then
@@ -88,13 +88,13 @@ echo -e ">>> Cloning Device Trees"
 echo -e ">>> Cloning Device, Vendor, Kernel and Hardware Trees"
 echo -e ">>> Please wait, this may take a while..."
 echo -e ">>> Cloning Device Tree: xiaomi/miatoll"
-git clone https://github.com/RosMiatoll/device_xiaomi_miatoll_rebase.git -b prebuild-kernel device/xiaomi/miatoll
+git clone https://github.com/Rosmi720/device_xiaomi_miatoll.git -b prebuild-kernel device/xiaomi/miatoll
 echo -e ">>> Done"
 echo -e ">>> Cloning Vendor Tree: xiaomi/vendor"
-git clone https://github.com/RosMiatoll/vendor_xiaomi_miatoll_rebase.git -b prebuild vendor/xiaomi/miatoll
+git clone https://github.com/Rosmi720/vendor_xiaomi_miatoll.git -b 16 vendor/xiaomi/miatoll
 echo -e ">>> Done"
 echo -e ">>> Cloning Kernel Tree: xiaomi/sm6250"
-git clone https://github.com/RosMiatoll/device_xiaomi_miatoll-kernel.git -b sixteen device/xiaomi/miatoll-kernel
+git clone https://github.com/Rosmi720/device_xiaomi_miatoll-kernel.git -b main device/xiaomi/miatoll-kernel
 echo -e ">>> Done"
 echo -e ">>> Cloning Hardware Tree: xiaomi/hardware_xiaomi"
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.0 hardware/xiaomi
@@ -103,19 +103,18 @@ echo -e ">>> Cloning Additional Hardware Trees"
 git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-22.2 hardware/sony/timekeep
 echo -e ">>> Done"
 echo -e ">>> Cloning MIUI Camera Vendor Tree: xiaomi/miuicamera"
-git clone https://github.com/Miatoll720G/vendor_xiaomi_miuicamera-miatoll.git -b 16 vendor/xiaomi/miuicamera-miatoll
+git clone https://github.com/RisingMIatoll/vendor_xiaomi_miuicamera-miatoll.git -b 16 vendor/xiaomi/miuicamera-miatoll
 echo -e ">>> Done"
-echo -e ">>> Cloning Dolby Vendor Tree: vendor/oneplus/dolby"
-git clone https://github.com/frost-testzone/vendor_oneplus_dolby.git -b main vendor/oneplus/dolby
+echo -e ">>> Cloning Dolby"
+git clone https://github.com/Rosmi720/vendor_oneplus_dolby.git -b main vendor/oneplus/dolby
 echo -e ">>> Done"
 echo -e ">>> All Device, Vendor, Kernel and Hardware Trees Cloned Successfully"
 echo -e ">>> Proceeding to sync remaining sources..."
 echo -e ">>> Please wait, this may take a while..."
-
 echo "Starting the build process..."
 . build/envsetup.sh
 
-riseup RMX1971 userdebug
+riseup miatoll userdebug
 
 echo "Running 'm installclean' for a safe build..."
 m installclean
